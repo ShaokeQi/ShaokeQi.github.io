@@ -5,109 +5,105 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Selina’s Mental Health Hub</title>
   <style>
-    * { margin:0; padding:0; box-sizing:border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-      color:#333; background:#f5f5f5;
-      display:flex; flex-direction:column;
-      min-height:100vh;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+
+      /* 🌈 设置背景图 */
+      background: url("images/bg_emotions.png") no-repeat center center fixed;
+      background-size: cover;
     }
+
     header {
-      background:#4a90e2; color:#fff; text-align:center;
-      padding:2rem 1rem; box-shadow:0 2px 6px rgba(0,0,0,0.1);
+      background: rgba(74, 144, 226, 0.9); /* 半透明背景 */
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
-    header h1 { font-size:2rem; margin-bottom:.5rem; }
-    header p  { font-size:1rem; }
-    .container {
-      flex:1; display:flex; flex-direction:column;
-      align-items:center; padding:2rem 1rem;
-      gap:2rem;
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
     }
-    .intro {
-      max-width:720px; background:#fff;
-      padding:1.5rem; border-radius:.5rem;
-      box-shadow:0 4px 12px rgba(0,0,0,0.08);
-      line-height:1.6;
-      color:#555;
+
+    header p {
+      font-size: 1rem;
     }
-    .video-card {
-      background:#fff; padding:1.5rem;
-      border-radius:.5rem;
-      box-shadow:0 4px 12px rgba(0,0,0,0.08);
-      max-width:720px; width:100%; text-align:center;
+
+    main.intro {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1rem;
+      gap: 2rem;
     }
-    .video-card h2 {
-      margin-bottom:1rem; color:#4a90e2; font-size:1.5rem;
+
+    .intro h2 {
+      font-size: 1.8rem;
+      color: #4a90e2;
+      background: rgba(255, 255, 255, 0.8); /* 白色半透明背景 */
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
     }
-    .video-card video {
-      width:100%; border-radius:.5rem;
-      box-shadow:0 2px 8px rgba(0,0,0,0.1);
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
     }
-    .caption {
-      margin-top:.8rem; font-style:italic; color:#666;
+
+    .button-row button {
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      background: #4a90e2;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      min-width: 160px;
+      transition: background 0.3s;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
+
+    .button-row button:hover {
+      background: #357ab7;
+    }
+
     footer {
-      text-align:center; padding:1rem;
-      font-size:.9rem; color:#777;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #eee;
+      background: rgba(0, 0, 0, 0.4);
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Selina’s Mental Health Hub</h1>
-    <p>Types of Psych · Psych Discussions · Science: Photos & Color</p>
+    <p>Explore Mental Health Through Media & Color</p>
   </header>
 
-  <main class="container">
-
-    <!-- 网站介绍 -->
-    <div class="intro">
-      <h2>Welcome to Selina’s Mental Health Hub</h2>
-      <p>
-        This is a basic website dedicated to sharing foundational knowledge in psychology.
-        You will find three main sections:
-      </p>
-      <ul>
-        <li><strong>Types of Psych</strong>: Definitions of common mental health terms.</li>
-        <li><strong>Psych Discussions</strong>: Video discussions analyzing current psychological phenomena.</li>
-        <li><strong>Science: Photos & Color</strong>: The science behind photographs and color impacts on mental well-being.</li>
-      </ul>
-      <p>
-        Feel free to explore the videos below to learn more about each topic.
-      </p>
+  <main class="intro">
+    <h2>Explore Our Sections</h2>
+    <div class="button-row">
+      <button onclick="location.href='types.html'">Types of Psych</button>
+      <button onclick="location.href='discussions.html'">Psych Discussions</button>
+      <button onclick="location.href='science.html'">Science: Photos & Color</button>
     </div>
-
-    <!-- 主视频 -->
-    <section class="video-card">
-      <h2>Psych Discussions</h2>
-      <video controls>
-        <source src="videos/psych_discussions.mp4" type="video/mp4" />
-        您的浏览器不支持 video 标签。
-      </video>
-      <p class="caption">
-        Main Discussion: In-Depth Analysis of Current Psychological Phenomena
-      </p>
-    </section>
-
-    <!-- 分支视频 1 -->
-    <section class="video-card">
-      <h2>Section1</h2>
-      <video controls>
-        <source src="videos/types_of_psych.mp4" type="video/mp4" />
-        您的浏览器不支持 video 标签。
-      </video>
-      <p class="caption">section1</p>
-    </section>
-
-    <!-- 分支视频 2 -->
-    <section class="video-card">
-      <h2>Section2</h2>
-      <video controls>
-        <source src="videos/science_photos_color.mp4" type="video/mp4" />
-        您的浏览器不支持 video 标签。
-      </video>
-      <p class="caption">section2</p>
-    </section>
   </main>
 
   <footer>
